@@ -34,8 +34,6 @@ RSpec.feature "Admin can edit items" do
       expect(page).to have_content("Item Updated!")
       expect(page).to have_content("Jalapeños con conejitos")
       expect(page).to have_content("crujiente y delicioso")
-      expect(page).to have_content("$8.00")
-      expect(page).to have_xpath("//*[@id='pickle_1']/div/img")
     end
   end
 
