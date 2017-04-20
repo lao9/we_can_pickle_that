@@ -1,4 +1,6 @@
-
+.retired {
+  color: #a0030b
+}
 .thumbnail {
   height: 40em;
 }
@@ -47,4 +49,15 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   opacity: .8;
+}
+
+.checkbox-list input[type="checkbox"] {
+  display: inline-block;
+  width: 10%;
+}
+
+.checkbox-list input[type="checkbox"] + label {
+  display: inline-block;
+  margin-left: 10%;
+  width: 80%;
 }

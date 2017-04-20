@@ -20,14 +20,9 @@ RSpec.feature "Admin can create items" do
       fill_in "Title", with: "Pickle"
       fill_in "Description", with: "It's green"
       fill_in "Price", with: 4.00
-      fill_in "item_image_url", with: "http://images.wisegeek.com/cornichons-in-a-jar.jpg"
+      attach_file "Image", "spec/fixtures/capybara.jpg"
 
       check "Briney"
-      # find(:css, "#Category[value='Briney']").set(true)
-
-      # Uncheck
-      # find(:css, "#cityID[value='62']").set(false)
-
 
       click_on "Create Item"
 
@@ -36,7 +31,7 @@ RSpec.feature "Admin can create items" do
       expect(page).to have_content("Pickle")
       expect(page).to have_content("It's green")
       expect(page).to have_content("$4.00")
-      expect(page).to have_xpath("//*[@id='pickle_1']/img")
+      expect(page).to have_xpath("//*[@id='pickle_1']/div/div[2]/img")
     end
 
     scenario "pickles are given a default image" do
@@ -65,7 +60,7 @@ RSpec.feature "Admin can create items" do
       expect(page).to have_content("Double Dill")
       expect(page).to have_content("It's green")
       expect(page).to have_content("$4.00")
-      expect(page).to have_xpath("//*[@id='pickle_2']/img")
+      expect(page).to have_xpath("//*[@id='pickle_2']/div/div[2]/img")
     end
   end
 
