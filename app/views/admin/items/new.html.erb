@@ -1,3 +1,4 @@
+<div class="whiteblock">
 <%= form_for @item, html: {multipart: true}, url: admin_items_path do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
@@ -16,3 +17,4 @@
 
   <%= f.submit %>
 <% end %>
+</div>
