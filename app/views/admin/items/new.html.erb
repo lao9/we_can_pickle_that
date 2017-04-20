@@ -1,3 +1,6 @@
+
+<div class="whiteblock">
+
 <h1>Create a New Item</h1>
 
 <%= form_for @item, html: {multipart: true, class: 'well'}, url: admin_items_path do |f| %>
@@ -30,3 +33,4 @@
 
   <%= f.submit "Create Item", class: 'btn btn-primary'%>
 <% end %>
+</div>
