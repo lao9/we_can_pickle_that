@@ -58,3 +58,7 @@ User.create(first_name: "Edward", last_name: "Donutbaker", email: "a5@a.com", pa
   puts "Updated User #{n}, #{user.full_name}"
   user.update(street: "#{n} Pickle Lane")
 end
+
+Order.all.sample(3).each do |order|
+  order.update(created_at: (Time.now - 30.days))
+end
